@@ -1,1 +1,2 @@
 Mezzanine==4.0.1
+djangowind==0.14.1
