@@ -7,7 +7,7 @@ DIR=/tmp/testctlmezz
 rm -rf $DIR
 mkdir $DIR
 virtualenv $DIR/outer-ve
-$DIR/outer-ve/bin/pip install Mezzanine
+$DIR/outer-ve/bin/pip install -r requirements.txt
 
 # then use that to make a test application
 cd $DIR

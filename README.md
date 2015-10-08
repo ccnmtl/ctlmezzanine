@@ -10,4 +10,5 @@ by Mezzanine.
     $ pip install Mezzanine
     $ mezzanine-project \
       --template=https://github.com/nikolas/ctlmezzanine/archive/master.tar.gz \
+      --name=Makefile \
       myproject
