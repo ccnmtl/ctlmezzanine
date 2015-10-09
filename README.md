@@ -7,7 +7,7 @@ by Mezzanine.
 
     $ virtualenv ~/ve
     $ source ~/ve/bin/activate
-    $ pip install Mezzanine
+    $ pip install https://github.com/stephenmcd/mezzanine/archive/master.tar.gz
     $ mezzanine-project \
       --template=https://github.com/nikolas/ctlmezzanine/archive/master.tar.gz \
       --name=Makefile \
