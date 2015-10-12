@@ -2,29 +2,11 @@ MANAGE=./manage.py
 APP={{ project_name }}
 FLAKE8=./ve/bin/flake8
 
-jenkins: ./ve/bin/python check flake8 jshint jscs mocha test
+jenkins: ./ve/bin/python check flake8 test
 
 ./ve/bin/python: requirements.txt bootstrap.py virtualenv.py
 	chmod +x manage.py bootstrap.py
 	./bootstrap.py
-
-jshint: node_modules/jshint/bin/jshint
-	./node_modules/jshint/bin/jshint media/js/src/ media/js/tests --config=./jshintrc
-
-jscs: node_modules/jscs/bin/jscs
-	./node_modules/jscs/bin/jscs media/js/src/ media/js/tests --config=./jscsrc
-
-mocha: node_modules/mocha/bin/mocha
-	node media/js/tests/test-runner.js
-
-node_modules/jshint/bin/jshint:
-	npm install jshint --prefix .
-
-node_modules/jscs/bin/jscs:
-	npm install jscs --prefix .
-
-node_modules/mocha/bin/mocha:
-	npm install --prefix .
 
 test: ./ve/bin/python
 	$(MANAGE) jenkins --pep8-exclude=migrations
