@@ -27,22 +27,22 @@ node_modules/mocha/bin/mocha:
 	npm install --prefix .
 
 test: ./ve/bin/python
-	$$(MANAGE) jenkins --pep8-exclude=migrations
+	$(MANAGE) jenkins --pep8-exclude=migrations
 
 flake8: ./ve/bin/python
-	$$(FLAKE8) $$(APP) --exclude=migrations --max-complexity=10
+	$(FLAKE8) $(APP) --exclude=migrations --max-complexity=10
 
 runserver: ./ve/bin/python check
-	$$(MANAGE) runserver
+	$(MANAGE) runserver
 
 migrate: ./ve/bin/python check jenkins
-	$$(MANAGE) migrate
+	$(MANAGE) migrate
 
 check: ./ve/bin/python
-	$$(MANAGE) check
+	$(MANAGE) check
 
 shell: ./ve/bin/python
-	$$(MANAGE) shell_plus
+	$(MANAGE) shell_plus
 
 clean:
 	rm -rf ve
@@ -66,16 +66,16 @@ rebase:
 	make flake8
 
 syncdb: ./ve/bin/python
-	$$(MANAGE) syncdb
+	$(MANAGE) syncdb
 
 collectstatic: ./ve/bin/python check
-	$$(MANAGE) collectstatic --noinput --settings=$$(APP).settings_production
+	$(MANAGE) collectstatic --noinput --settings=$(APP).settings_production
 
 # run this one the very first time you check
 # this out on a new machine to set up dev
 # database, etc. You probably *DON'T* want
 # to run it after that, though.
 install: ./ve/bin/python check jenkins
-	createdb $$(APP)
-	$$(MANAGE) syncdb --noinput
+	createdb $(APP)
+	$(MANAGE) syncdb --noinput
 	make migrate
