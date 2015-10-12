@@ -9,10 +9,10 @@ jenkins: ./ve/bin/python check flake8 test
 	./bootstrap.py
 
 test: ./ve/bin/python
-	$(MANAGE) jenkins --pep8-exclude=migrations
+	$(MANAGE) jenkins
 
 flake8: ./ve/bin/python
-	$(FLAKE8) $(APP) --exclude=migrations --max-complexity=10
+	$(FLAKE8) $(APP) --max-complexity=10
 
 runserver: ./ve/bin/python check
 	$(MANAGE) runserver
@@ -30,7 +30,6 @@ clean:
 	rm -rf ve
 	rm -rf media/CACHE
 	rm -rf reports
-	rm -f celerybeat-schedule .coverage
 	find . -name '*.pyc' -exec rm {} \;
 
 pull:
