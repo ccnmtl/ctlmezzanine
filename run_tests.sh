@@ -14,6 +14,7 @@ source $DIR/outer-ve/bin/activate
 cd $DIR
 ./outer-ve/bin/mezzanine-project \
     --template=$TEMPLATEDIR \
+    --name=Makefile \
     testproject
 cd testproject
 
