@@ -14,3 +14,7 @@ by Mezzanine.
       --template=https://github.com/nikolas/ctlmezzanine/archive/master.tar.gz \
       --name=Makefile \
       myproject
+    $ cd myproject
+    $ source ./ve/bin/activate
+    $ ./bootstrap.py
+    $ make
