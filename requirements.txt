@@ -1,4 +1,5 @@
 https://github.com/stephenmcd/mezzanine/archive/master.tar.gz
 djangowind==0.14.1
+pep8==1.6.2
 flake8==2.4.1
 django-jenkins==0.17.0

@@ -223,6 +223,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
+    "django_jenkins",
 )
 
 # List of processors used by RequestContext to populate the context.
