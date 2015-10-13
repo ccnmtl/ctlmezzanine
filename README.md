@@ -15,6 +15,6 @@ by Mezzanine.
       --name=Makefile \
       myproject
     $ cd myproject
+    $ make ./ve/bin/python
     $ source ./ve/bin/activate
-    $ ./bootstrap.py
     $ make
