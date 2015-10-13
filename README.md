@@ -11,7 +11,7 @@ by Mezzanine.
     $ source ~/ve/bin/activate
     $ pip install https://github.com/stephenmcd/mezzanine/archive/master.tar.gz
     $ mezzanine-project \
-      --template=https://github.com/nikolas/ctlmezzanine/archive/master.tar.gz \
+      --template=https://github.com/ccnmtl/ctlmezzanine/archive/master.tar.gz \
       --name=Makefile \
       myproject
     $ cd myproject
