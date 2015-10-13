@@ -6,9 +6,13 @@ import shutil
 
 pwd = os.path.abspath(os.path.dirname(__file__))
 vedir = os.path.abspath(os.path.join(pwd, "ve"))
+templatetests = os.path.abspath(os.path.join(pwd, "run_template_tests.sh"))
 
 if os.path.exists(vedir):
     shutil.rmtree(vedir)
+
+if os.path.exists(templatetests):
+    os.remove(templatetests)
 
 virtualenv_support_dir = os.path.abspath(
     os.path.join(
