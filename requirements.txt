@@ -11,6 +11,7 @@ requests==2.8.0
 requests-oauthlib==0.5.0
 oauthlib==1.0.3
 grappelli_safe==0.4.1
+filebrowser_safe==0.4.0
 Pillow==3.0.0
 beautifulsoup4==4.4.1
 https://github.com/stephenmcd/mezzanine/archive/master.tar.gz
